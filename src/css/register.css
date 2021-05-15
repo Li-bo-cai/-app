@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    display: flex;
+    justify-content: center;
+    background: url('../img/reg.png') no-repeat 0 0;
+    background-size: 110%;
+}
+/* 密码登录 */
+.pswLogin{
+    top: 30px;
+    right: 20px;
+    text-align: right;
+}
+/* 文本标题 */
+.title{
+    margin-top: 80px;
+}
+.title p{
+    height: 40px;
+}
+.title p:last-child{
+    height: 20px;
+}
+/* 表单输入 */
+.from{
+    margin-top: 43px;
+}
+.from>div{
+    margin-bottom: 20px;
+}
+.from input{
+    width: 350px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    border: 0;
+    outline:none;
+    text-indent: 12px;
+}
+.from input::placeholder{
+    color: #fff;
+    font-size: 16px;
+}
+/* 选择栏  手机号登录*/
+.ownership{
+    top: 15px;
+    left: 12px;
+    display: inline-block;
+    /* text-align: right; */
+    width: 50px;
+    height: 22px;
+}
+ul{
+    top: 0;
+    left: 2px;
+   display: none;
+}
+li{
+    width: 60px;
+    height: 25px;
+    /* background: #ccc; */
+    border: 1px solid #fff;
+
+}
+.tel .iconfont {
+    top: 18px;
+    left: 62px;
+}
+.tel input{
+    text-indent: 83px;
+}
+/* 验证码 */
+.verCode{
+    display: flex;
+    justify-content: space-between;
+}
+.verCode input{
+    width: 213px;
+}
+.random_Code{
+    width: 123px;
+    height: 50px;
+    background: #D08BE6;
+}
+/* 注册按钮 */
+.from .upload{
+    text-align: center;
+    margin-bottom: 27px;
+}
+.upload input{
+    background:rgba(99, 255, 167, 0.3);
+    color: #fff;
+}
+/* 微信注册 */
+.wxreg {
+    text-align: right;
+}
+.wxreg .iconfont{
+    font-size: 22px;
+}
+/* 底部hold */
+.hold{
+    bottom: 60px;
+    right: 50%;
+    margin-right: -50px;
+}

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    display: flex;
+    justify-content: center;
+    background: url('../img/reg.png') no-repeat;
+    background-size: 110%;
+}
+/* 账号注册 */
+.codeReg{
+    top: 30px;
+    right: 20px;
+    text-align: right;
+}
+/* 文本标题 */
+.title{
+    margin-top: 80px;
+}
+.title p{
+    height: 40px;
+}
+/* 表单输入 */
+.from{
+    margin-top: 43px;
+}
+.from>div{
+    margin-bottom: 20px;
+}
+.from input{
+    width: 350px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    border: 0;
+    outline:none;
+    text-indent: 12px;
+}
+.from input::placeholder{
+    color: #fff;
+    font-size: 16px;
+}
+/* 登录按钮 */
+.from .upload{
+    text-align: center;
+    margin-bottom: 27px;
+}
+.upload input{
+    background:rgba(99, 255, 167, 0.3);
+    color: #fff;
+}
+
+.down{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* 忘记密码 */
+.forgetPsw{
+    text-align: center;
+}
+/* 微信注册 */
+.wxreg{
+    top: 0;
+    right: 0;
+}
+/* 底部hold */
+.hold{
+    bottom: 60px;
+    right: 50%;
+    margin-right: -50px;
+}

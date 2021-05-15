@@ -14,7 +14,8 @@ module.exports = {
     entry: {
         home: './src/js/home.js',
         login: './src/js/login.js',
-        register: './src/js/register.js'
+        register: './src/js/register.js',
+        propaganda: './src/js/propaganda.js'
     },
     //出口
     output: {
@@ -42,9 +43,9 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath:'../'
+                            publicPath: '../'
                         }
-                    },'css-loader', 'postcss-loader','less-loader']
+                    }, 'css-loader', 'postcss-loader', 'less-loader']
             },
             //图片
             {
@@ -90,6 +91,11 @@ module.exports = {
             template: './src/page/register.html',
             filename: 'register.html',
             chunks: ['register']
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/page/propaganda.html',
+            filename: 'propaganda.html',
+            chunks: ['propaganda']
         }),
         // 输出到css文件夹里
         new MiniCssExtractPlugin({

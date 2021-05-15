@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+header p{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+main{
+    flex: 1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../img/porpag.png') no-repeat;
+    background-size: 110%;
+}
+main .count_down{
+    top: 28px;
+    right: 14px;
+    width: 105px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    background: #fff;
+    text-align: center;
+}
+main .count_down span{
+    padding: 0 10px;
+    width: 26px;
+    height: 20px;
+}
+main .count_down .btn{
+    width: 28px;
+    padding: 0 15px ;
+    border-left: 1px solid #bbb;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0) scale(0);
+    }
+    100%{
+        transform: translateY(150px) scale(1);
+    }
+}
+main .animation{
+    bottom: 274px;
+    font-size: 48px;
+    font-weight: bolder;
+    animation:  move 1.5s forwards;
+}
