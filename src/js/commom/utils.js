@@ -8,16 +8,27 @@ utils.teltext = function (val) {
     return isReg;
 }
 
-//
-utils.toast = function (bool, msg) {
+/**
+ * @toast  提示文本框
+ * @bool   输入true false  判断用户是否输入正确
+ * @msg    用户提示文本信息   String
+ * @time   毫秒值 默认2000毫秒
+ * */ 
+//创建弹出框
+utils.toast = function (bool, msg, time=2000) {
     let toast = document.createElement('div');
     toast.className = 'toast';
-    let iconName = bool ? num1 : num2;
+    let iconName = bool ? 'icon-secces' : 'icon-shibai';
     let html = `
-    <i class="iconfont ${iconname}"></i>
-    <p>${msg}</p>
+    <i class="iconfont ${iconName}"></i>
+    <p class ="msg">${msg}</p>
     `
+    toast.innerHTML = html;
     document.body.appendChild(toast);
+
+    setTimeout(function () {
+        toast.remove();
+    }, time);
 }
 
 window.utils = utils;

@@ -67,18 +67,18 @@ document.ready(function () {
     // 按钮失焦验证
     // 手机验证
     telInp.addEventListener('blur', function (event) {
-        if (!utils.teltext(telInp.value) && telInp.value != '') {
+        if (!utils.teltext(telInp.value) && telInp.value) {
             telInp.style.color = 'red';
+            utils.toast(false, '手机号有误');
         } else {
             telInp.style.color = '#fff';
         }
     })
     // 验证码验证
     verCodeInp.addEventListener('change', function (event) {
-        console.log(yzmStr);
-        console.log(verCodeInp.value);
-        if (verCodeInp.value != yzmStr) {
+        if (verCodeInp.value != yzmStr && verCodeInp) {
             verCodeInp.style.color = 'red';
+            utils.toast(false, '验证码错误');
         } else {
             verCodeInp.style.color = '#fff';
         }
@@ -87,6 +87,7 @@ document.ready(function () {
     pwd1Inp.addEventListener('blur', function (event) {
         if (pwdInp.value != pwd1Inp.value) {
             pwd1Inp.style.color = 'red';
+            utils.toast(false, '两次密码不一致');
         } else {
             pwd1Inp.style.color = '#fff';
         }
@@ -94,21 +95,22 @@ document.ready(function () {
 
     // 提交时验证
     regloadInp.addEventListener('click', function (event) {
-        if (!utils.teltext(telInp.value) && telInp.value != '') {
-            telInp.style.color = 'red';
-        } else if (verCodeInp.value != yzmStr) {
-            verCodeInp.style.color = 'red';
-        } else if (pwdInp.value != pwd1Inp.value) {
-            pwd1Inp.style.color = 'red';
-        } else {
+        if (telInp.value && verCodeInp.value && pwd1Inp.value) {
             // 提交
             let data = {
                 account: telInp.value,
                 password: pwd1Inp.value
             }
             $http.post('/users/add', data, function (res) {
-                console.log(res);
+                // console.log(res);
+                if (res.status == 1){
+                    utils.toast(false, res.msg);
+                }else{
+                    utils.toast(true, '用户创建成功');
+                }
             })
+        } else {
+            utils.toast(false, '请完善信息');
         }
     })
 

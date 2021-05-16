@@ -10,3 +10,29 @@
     width: 100%;
     height: 100%;
 }
+
+/* 弹窗样式 */
+.toast{
+    position: fixed;
+    top: calc(50%-100px);
+    left: calc(50%-100px);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background: rgba(0,0,0,1);
+}
+.toast .iconfont{
+    display: block;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 40px;
+}
+.toast .msg{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 公用页脚导航栏 */

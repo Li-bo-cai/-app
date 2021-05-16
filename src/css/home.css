@@ -1,6 +1,4 @@
 body{
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 nav{
@@ -9,10 +7,10 @@ nav{
     background: pink;
 }
 main{
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: calc(100%-30px);
+    /* width: 100%; */
     height: calc(100%-277px);
     background: #ccc;
 }
@@ -44,11 +42,13 @@ main{
 .training{
     width: 100%;
     height: 110px;
+    background: blue;
 }
 /* 户外跑步 */
 .running{
     width: 100%;
     height: 110px;
+    background: red;
 }
 /* 页脚 */
 footer{
@@ -56,7 +56,7 @@ footer{
     display: flex;
     height: 77px;
     justify-content: space-around;
-    box-shadow:  0 0px 10px 1px #252525;
+    box-shadow:  0px 0px 10px 1px #252525;
 }
 footer .iconfont{
     display: inline-block;
@@ -64,4 +64,5 @@ footer .iconfont{
 }
 footer > div{
     width: 45px;
+    text-align: center;
 }

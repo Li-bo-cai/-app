@@ -94,7 +94,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login', 'commonCss', 'dom', 'http']   //链接到login.js
+            chunks: ['login', 'commonCss', 'dom', 'http','utils']   //链接到login.js
         }),
         new HtmlWebpackPlugin({
             template: './src/page/register.html',
@@ -122,7 +122,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'login.html', // 打开的页面
+        openPage: 'home.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }

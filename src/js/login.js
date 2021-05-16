@@ -15,15 +15,19 @@ document.ready(function () {
             $http.post('/users/login', data, function (res) {
                 // 请求成功时
                 console.log(res);
-                if (res.msg === 'ok') {
+                if (res.msg === 'OK') {
                     let user = res.data.user;
                     localStorage.setItem('user', JSON.stringify(user));
-                }else{
-                    console.log('有错');
+                    utils.toast(true, '登录成功  即将跳转',2000);
+                    setTimeout(function(){
+                        location.href='../home.html';
+                    },2000)
+                } else {
+                    utils.toast(false, '用户名或密码有误');
                 }
             })
         } else {
-            console.log('请登录');
+            utils.toast(false, '用户名或密码有误');
         }
     })
 

@@ -11,6 +11,7 @@
 .rel{position: relative;}
 /* 绝对定位 */
 .abs{position: absolute;}
+/* 固定定位 */
 .fix{position: fixed;}
 /* 盒模型 */
 .mt0 { margin-top: 0; }
