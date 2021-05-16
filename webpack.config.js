@@ -12,6 +12,15 @@ const { postcss } = require('postcss-preset-env');
 module.exports = {
     // 入口
     entry: {
+        // 引入共有的css
+        commonCss: './src/js/commonCss.js',
+        // 引入公有的js
+        dom: './src/js/commom/dom.js',
+        http: './src/js/commom/http.js',
+        utils: './src/js/commom/utils.js',
+        // 引入三方插件
+        captcha: './src/lib/captcha/captcha-mini.js',
+
         home: './src/js/home.js',
         login: './src/js/login.js',
         register: './src/js/register.js',
@@ -53,7 +62,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     name: '[hash:16].[ext]',
-                    limit: 900 * 1024,
+                    limit: 20 * 1024,
                     esModule: false,
                     outputPath: 'img',
                 }
@@ -80,22 +89,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/home.html',//以home.html作为打包模板
             filename: 'home.html',
-            chunks: ['home']    //链接到home.js
+            chunks: ['home', 'commonCss', 'dom', 'http']    //链接到home.js
         }),
         new HtmlWebpackPlugin({
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login']
+            chunks: ['login', 'commonCss', 'dom', 'http']   //链接到login.js
         }),
         new HtmlWebpackPlugin({
             template: './src/page/register.html',
             filename: 'register.html',
-            chunks: ['register']
+            chunks: ['register', 'commonCss', 'dom', 'http','captcha','utils']   //链接到register.js
         }),
-         new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             template: './src/page/propaganda.html',
             filename: 'propaganda.html',
-            chunks: ['propaganda']
+            chunks: ['propaganda', 'commonCss', 'dom']      //链接到propaganda.js
         }),
         // 输出到css文件夹里
         new MiniCssExtractPlugin({
@@ -113,7 +122,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'home.html', // 打开的页面
+        openPage: 'login.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }

@@ -9,24 +9,54 @@ nav{
     background: pink;
 }
 main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: calc(100%-30px);
     height: calc(100%-277px);
     background: #ccc;
 }
+/* 今日排名 */
 .today_rank{
     width: calc(40%-11px);
+    height: 150px;
+    background: #54AFD9;
 }
+/* 累计打卡 */
 .clockIn{
     width: calc(60%-11px);
+    height: 150px;
+    background: #9ED9F7;
 }
-
-
+/* 运动数据 */
+.sport_data{
+    width: calc(50%-12.5px);
+    height: 110px;
+    background: #000;
+}
+/* 累计运动徽章 */
+.badge{
+    width: calc(50%-7.5px);
+    height: 110px;
+    background: #9DBDE3;
+}
+/* 课程训练 */
+.training{
+    width: 100%;
+    height: 110px;
+}
+/* 户外跑步 */
+.running{
+    width: 100%;
+    height: 110px;
+}
 /* 页脚 */
 footer{
     width: 100%;
     display: flex;
     height: 77px;
     justify-content: space-around;
+    box-shadow:  0 0px 10px 1px #252525;
 }
 footer .iconfont{
     display: inline-block;

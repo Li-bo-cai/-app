@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="container dpflex">
     <main class="rel">
         <div class="pswLogin fix f20"><a class="cf" href="./login.html">密码登录</a></div>
         <div class="title">
             <p class="f28 cf fw">手机号登录/注册</p>
-            <p class="f16">快速找到好友, 一站式记录你的运动</p>
+            <p class="f16 cf">快速找到好友, 一站式记录你的运动</p>
         </div>
         <div class="from">
             <!-- 手机验证 -->
@@ -31,19 +31,21 @@
             <!-- 验证码 -->
             <div class="verCode">
                 <input type="text" id="verCode" placeholder="请输入验证码">
-                <div class="random_Code"></div>
+                <div class="random_Code">
+                    <canvas width="123" height="50" id="captcha"></canvas>
+                </div>
             </div>
             <!-- 密码 -->
-            <div class="psw">
-                <input type="password" id="psw" placeholder="请输入密码">
+            <div class="pwd">
+                <input type="password" id="pwd" placeholder="请输入密码">
             </div>
             <!-- 确认密码 -->
-            <div class="psw_agin">
-                <input type="password" id="psw" placeholder="请再次确认密码">
+            <div class="pwd_agin">
+                <input type="password" id="pwd1" placeholder="请再次确认密码">
             </div>
             <!-- 注册按钮 -->
             <div class="upload">
-                <input type="button" value="注册账号">
+                <input id = "regload" type="button" value="注册账号">
             </div>
         </div>
         <!-- 微信注册 -->

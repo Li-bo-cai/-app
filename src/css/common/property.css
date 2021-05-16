@@ -1,23 +1,34 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-body,html{
-    width: 100%;
-    height: 100%;
-}
-/* 公用css样式文件 */
+/*
+ * 面向属性的 CSS
+ */
+
+/* 布局方式 */
+.dpflex { display: flex; }
+.fldcol{flex-direction: column;}
+.dpnone { display: none; }
+.flex1 { flex: 1 }
 /* 相对定位 */
-.rel{
-    position: relative;
-}
+.rel{position: relative;}
 /* 绝对定位 */
-.abs{
-    position: absolute;
-}
-.fix{
-    position: fixed;
-}
+.abs{position: absolute;}
+.fix{position: fixed;}
+/* 盒模型 */
+.mt0 { margin-top: 0; }
+.mt8 { margin-top: 8px; }
+.mt16 { margin-top: 16px; }
+.mt20 { margin-top: 20px; }
+.mt40 { margin-top: 40px; }
+
+.mr16 { margin-right: 16px; } 
+
+.mb16 { margin-bottom: 16px; }
+
+.ml12 { margin-left: 12px; }
+
+.pd16 { padding: 16px; }
+
+.pl8 { padding-left: 8px; }
+
 /* 文字公用颜色 */
 .cf{
     color: #fff;
@@ -54,6 +65,9 @@ body,html{
 .f16 {
     font-size: 16px;
 }
+.f18 {
+    font-size: 18px;
+}
 .f20 {
     font-size: 20px;
 }
@@ -80,14 +94,3 @@ body,html{
 .ta{
     text-align: center;
 }
-
-/* 标签居中 */
-.ma {
-    margin: 0 auto;
-}
-/* 文本缩进 */
-
-/* margin */
-
-/* padding */
-
