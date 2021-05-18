@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body class="dpflex fldcol">
     <!-- 轮播图 -->
     <nav>
-
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../img/index-swiper-bg1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/index-swiper-bg2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/index-swiper-bg3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
     </nav>
     <!-- 身体 -->
-    <main class="dpflex">
-        <!-- 今日排名 -->
-        <div class="today_rank"></div>
-        <!-- 累计打卡 -->
-        <div class="clockIn"></div>
-        <!-- 运动数据 -->
-        <div class="sport_data"></div>
-        <!-- 累计运动徽章 -->
-        <div class="badge"></div>
+    <main class="dpflex fldcol">
+        <div class="list-item dpflex">
+            <!-- 今日排名 -->
+            <div class="today_rank br15 rel">
+                <p class="f20">今日排名</p>
+                <img class="abs" src="../img/index-card-rank.png" alt="">
+                <span class="abs cf rank fw">900</span>
+            </div>
+            <!-- 累计打卡 -->
+            <div class="clockIn br15 rel">
+                <p class="f20">累积打卡<span class="clockIn-day">23</span>天</p>
+                <img class="abs" src="../img/index-card-sum.png" alt="">
+                <span class="abs f18 fw clockIn-btn">今日打卡</span>
+            </div>
+        </div>
+        <div class="list-item dpflex">
+            <!-- 运动数据 -->
+            <div class="sport_data br15">
+                <p class="f20 cf">运动数据</p>
+            </div>
+            <!-- 累计运动徽章 -->
+            <div class="badge br15 rel">
+                <p class="f20">累积运动徽章</p>
+                <img class="abs" src="../img/index-card-badge.png" alt="">
+                <span class="abs"><span class="fw insigniaNum">3</span>枚</span>
+            </div>
+        </div>
         <!-- 课程训练 -->
-        <div class="training"></div>
+        <div class="training br15"></div>
         <!-- 户外跑步 -->
-        <div class="running"></div>
+        <div class="running br15"></div>
     </main>
     <!-- 页脚 -->
-    <footer>
-        <div>
-            <i class="iconfont icon-home"></i>
-            <p>首页</p>
-        </div>
-        <div>
-            <i class="iconfont icon-sport"></i>
-            <p>运动</p>
-        </div>
-        <div>
-            <i class="iconfont icon-wode"></i>
-            <p>我的</p>
-        </div>
-    </footer>
+
+
 </body>
+
 </html>

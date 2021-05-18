@@ -20,11 +20,13 @@ module.exports = {
         utils: './src/js/commom/utils.js',
         // 引入三方插件
         captcha: './src/lib/captcha/captcha-mini.js',
+        swiper:'./src/lib/swiper/swiper-bundle.js',
 
         home: './src/js/home.js',
         login: './src/js/login.js',
         register: './src/js/register.js',
-        propaganda: './src/js/propaganda.js'
+        propaganda: './src/js/propaganda.js',
+        mine: './src/js/mine.js'
     },
     //出口
     output: {
@@ -89,22 +91,27 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/home.html',//以home.html作为打包模板
             filename: 'home.html',
-            chunks: ['home', 'commonCss', 'dom', 'http']    //链接到home.js
+            chunks: ['home', 'commonCss', 'dom', 'http','utils','swiper']    //链接到home.js
         }),
         new HtmlWebpackPlugin({
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login', 'commonCss', 'dom', 'http','utils']   //链接到login.js
+            chunks: ['login', 'commonCss', 'dom', 'http', 'utils']   //链接到login.js
         }),
         new HtmlWebpackPlugin({
             template: './src/page/register.html',
             filename: 'register.html',
-            chunks: ['register', 'commonCss', 'dom', 'http','captcha','utils']   //链接到register.js
+            chunks: ['register', 'commonCss', 'dom', 'http', 'captcha', 'utils']   //链接到register.js
         }),
         new HtmlWebpackPlugin({
             template: './src/page/propaganda.html',
             filename: 'propaganda.html',
             chunks: ['propaganda', 'commonCss', 'dom']      //链接到propaganda.js
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/mine.html',
+            filename: 'mine.html',
+            chunks: ['mine', 'commonCss', 'dom','http','utils']      //链接到propaganda.js
         }),
         // 输出到css文件夹里
         new MiniCssExtractPlugin({

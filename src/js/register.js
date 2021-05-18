@@ -103,10 +103,17 @@ document.ready(function () {
             }
             $http.post('/users/add', data, function (res) {
                 // console.log(res);
-                if (res.status == 1){
+                if (res.status == 1) {
                     utils.toast(false, res.msg);
-                }else{
+                } else {
                     utils.toast(true, '用户创建成功');
+                    $http.post('/users/login', data, function (res1) {
+                        console.log(data);
+                        localStorage.setItem('user',JSON.stringify(res1.data.user));
+                        setTimeout(function () {
+                            location.href = '../home.html';
+                        }, 2000)
+                    })
                 }
             })
         } else {

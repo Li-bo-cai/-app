@@ -1,68 +1,119 @@
 body{
     align-items: center;
+    /* overflow-y: scroll; */
 }
 nav{
     width: 100%;
     height: 200px;
     background: pink;
 }
+.swiper-container {
+    width: 100%;
+    height: 200px;
+}  
 main{
-    flex-wrap: wrap;
     justify-content: space-between;
-    width: calc(100%-30px);
-    /* width: 100%; */
-    height: calc(100%-277px);
-    background: #ccc;
+    width: 90%;
+    margin: 0 5%;
+    padding-bottom: 92px;
+}
+main>div{
+    margin-top: 20px;
+}
+main p{
+    position: relative;
+    z-index: 15;
+    margin: 15px 0 0 15px;
+    font-weight: bolder;
+    color: #004E73;
+}
+.list-item{
+    justify-content: space-between;
 }
 /* 今日排名 */
 .today_rank{
-    width: calc(40%-11px);
+    width: calc(40%-10px);
     height: 150px;
     background: #54AFD9;
+    overflow: hidden;
+}
+.today_rank img{
+    bottom: 12px;
+    left: -15px;
+    width: 120px;
+    height: 110px;
+}
+.rank{
+    bottom: 7px;
+    left: 34px;
+    font-size: 40px;
 }
 /* 累计打卡 */
 .clockIn{
-    width: calc(60%-11px);
+    width: calc(60%-12px);
     height: 150px;
     background: #9ED9F7;
+    overflow: hidden;
+}
+.clockIn img{
+    bottom: 10px;
+    left: 10px;
+    width: 110px;
+    height: 110px;
+}
+.clockIn>span{
+    bottom: 25px;
+    left: 90px;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #004E73;
+    border: 3px solid #005177;
+    border-radius: 20px;
 }
 /* 运动数据 */
 .sport_data{
     width: calc(50%-12.5px);
-    height: 110px;
-    background: #000;
+    height: 110px; 
+    background: url('../img/index-card-data.png') no-repeat top center;
+    background-size: cover;
 }
 /* 累计运动徽章 */
 .badge{
     width: calc(50%-7.5px);
     height: 110px;
     background: #9DBDE3;
+    overflow: hidden;
+}
+.badge img{
+    bottom: -10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+}
+.badge>span{
+    bottom: 0px;
+    left: 95px;
+    color: #004E73;
+}
+.badge span >span{
+    font-size: 80px;
 }
 /* 课程训练 */
 .training{
     width: 100%;
     height: 110px;
     background: blue;
+    background: url('../img/course-img04.jpg') no-repeat;
+    background-size: cover;
 }
 /* 户外跑步 */
 .running{
     width: 100%;
     height: 110px;
     background: red;
-}
-/* 页脚 */
-footer{
-    width: 100%;
-    display: flex;
-    height: 77px;
-    justify-content: space-around;
-    box-shadow:  0px 0px 10px 1px #252525;
-}
-footer .iconfont{
-    display: inline-block;
-    font-size: 45px;
-}
-footer > div{
-    width: 45px;
-    text-align: center;
+    background: url('../img/course-img02.png');
+    background-size: cover;
 }

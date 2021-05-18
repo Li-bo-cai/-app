@@ -1,0 +1,92 @@
+main{
+    background: #E8E8E8;
+    padding-bottom: 90px;
+    /* overflow-y: scroll; */
+}
+.userHeader{
+    height: 100%;
+    height: 200px;
+    background: #fff;
+}
+.headBox{
+    padding: 20px;
+    align-items: center;
+}
+.head-portrait{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #4294FF;
+}
+.member{
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 22px;
+    font-style: italic;
+    background: #f60;
+}
+/* 个性签名 */
+.describe{
+    display: inline-block;
+    height: 23px;
+    /* line-height: 23px; */
+    width: 200px;
+    white-space:nowrap;
+    overflow: hidden;
+}
+/* 运动数据 */
+.show{
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    background: #fff;
+}
+.show .title{
+    line-height: 34px;
+}
+.icon-digital,.icon-huizhang{
+    font-size: 26px !important;
+    color: #4294FF;
+    margin-right: 10px;
+}
+.show .iconfont{
+    font-size: 20px;
+}
+.total{
+    width: calc(50%);
+    height: 75px;
+    padding: 10px;
+}
+.sportMin,.consume{
+    /* line-height: 75px; */
+    font-size: 38px;
+    color: #4294FF;
+}
+.consumption{
+    width: calc(50%);
+    height: 75px;
+    border-left: 1px dotted #000;
+    padding: 10px;
+}
+.badgeBox{
+    justify-content: space-around;
+    padding: 15px;
+}
+.item-badge{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #8a8a8a;
+}
+
+.logOut{
+    margin-top: 10px;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+    background: #fff;
+    text-align: center;
+    color: #4294FF;
+}
