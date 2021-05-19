@@ -1,0 +1,20 @@
+#sign{
+    padding: 16px;
+}
+#sign-val{
+    width: 100%;
+    margin-top: 20px;
+    height: 175px;
+    border-radius: 5px;
+}
+#save{
+    width: 90%;
+    height: 55px;
+    line-height: 55px;
+    margin: 0 5%;
+    background: #4294FF;
+    text-align: center;
+    color: #fff;
+    border-radius: 55px;
+    font-size: 18px;
+}

@@ -58,7 +58,7 @@ const $http = {
   // 简洁版的 get 封装
   get: function (url, callback) {
     this.ajax({
-      url: url, 
+      url: url,
       method: 'get',
       success: callback,
     })
@@ -66,7 +66,7 @@ const $http = {
   // 简洁版的 post 封装
   post: function (url, params, callback) {
     this.ajax({
-      url: url, 
+      url: url,
       method: 'post',
       data: params,
       success: callback,
@@ -81,8 +81,8 @@ function $updateFile(url, fdKey, fdValue, success) {
   const fd = new FormData();
   fd.append(fdKey, fdValue);
 
-  xhr.open('POST', url);
-  xhr.onreadystatechange = function() {
+  xhr.open('POST', BASE_URL + url);
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const resData = JSON.parse(xhr.responseText)
       success(resData)

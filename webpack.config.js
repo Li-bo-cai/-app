@@ -20,13 +20,16 @@ module.exports = {
         utils: './src/js/commom/utils.js',
         // 引入三方插件
         captcha: './src/lib/captcha/captcha-mini.js',
-        swiper:'./src/lib/swiper/swiper-bundle.js',
-
+        swiper: './src/lib/swiper/swiper-bundle.js',
+        weui:'./src/lib/weui/weui.js',
+        // 自己的js
         home: './src/js/home.js',
         login: './src/js/login.js',
         register: './src/js/register.js',
         propaganda: './src/js/propaganda.js',
-        mine: './src/js/mine.js'
+        mine: './src/js/mine.js',
+        edit: './src/js/edit.js',
+        curriculum: './src/js/curriculum.js',
     },
     //出口
     output: {
@@ -89,29 +92,39 @@ module.exports = {
     plugins: [
         //html打包插件
         new HtmlWebpackPlugin({
-            template: './src/page/home.html',//以home.html作为打包模板
+            template: './src/page/home.html',//以home.html作为打包模板  首页
             filename: 'home.html',
-            chunks: ['home', 'commonCss', 'dom', 'http','utils','swiper']    //链接到home.js
+            chunks: ['home', 'commonCss', 'dom', 'http', 'utils', 'swiper']    //链接到home.js
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/login.html',
+            template: './src/page/login.html',//登录页
             filename: 'login.html',
             chunks: ['login', 'commonCss', 'dom', 'http', 'utils']   //链接到login.js
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/register.html',
+            template: './src/page/register.html',//注册页
             filename: 'register.html',
             chunks: ['register', 'commonCss', 'dom', 'http', 'captcha', 'utils']   //链接到register.js
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/propaganda.html',
+            template: './src/page/propaganda.html',//广告页
             filename: 'propaganda.html',
             chunks: ['propaganda', 'commonCss', 'dom']      //链接到propaganda.js
         }),
         new HtmlWebpackPlugin({
-            template: './src/page/mine.html',
+            template: './src/page/mine.html',//我的页面
             filename: 'mine.html',
-            chunks: ['mine', 'commonCss', 'dom','http','utils']      //链接到propaganda.js
+            chunks: ['mine', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/edit.html',//编辑页
+            filename: 'edit.html',
+            chunks: ['edit', 'commonCss', 'dom', 'http','weui','utils']      //链接到propaganda.js
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/curriculum.html',//课程训练
+            filename: 'curriculum.html',
+            chunks: ['curriculum', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
         }),
         // 输出到css文件夹里
         new MiniCssExtractPlugin({

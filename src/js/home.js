@@ -23,7 +23,7 @@ document.ready(function () {
     let clockInDay = document.querySelector('.clockIn-day');
     let insignia = document.querySelector('.insigniaNum');
     let clockInBtn = document.querySelector('.clockIn-btn');
-
+    let trainingDom = document.querySelector('.training');
     // console.log(user);
     function getHomedata() {
         $http.get('/headPageInfo?userId=' + user.userId, function (res) {
@@ -37,8 +37,8 @@ document.ready(function () {
         })
     }
     getHomedata();
+    // 点击时判断是否打卡
     clockInBtn.addEventListener('click', function (event) {
-        // 点击时判断是否打卡
         $http.get('/clockIn?userId=' + user.userId, function (res1) {
             if (0 === res1.status) {
                 getHomedata();
@@ -46,5 +46,9 @@ document.ready(function () {
         })
     })
 
+    // 课程训练
+    trainingDom.addEventListener('click', function () {
+        location.href = './curriculum.html'
+    })
 
 })

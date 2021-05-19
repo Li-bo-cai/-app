@@ -33,7 +33,7 @@ utils.toast = function (bool, msg, time = 2000) {
 
 
 /**
- * 
+ * @addfooter   添加页脚部分
  */
 utils.addFooter = function (page) {
     let footer = document.createElement('footer');
@@ -54,13 +54,32 @@ utils.addFooter = function (page) {
     footer.innerHTML = html;
     document.querySelector('body').appendChild(footer);
     let iconItem = document.querySelectorAll('footer .icon-item');
-    let arr = ['../../home.html','../../sport.html','../../mine.html']
-    iconItem.forEach(function (item,index) {
+    let arr = ['../../home.html', '../../sport.html', '../../mine.html']
+    iconItem.forEach(function (item, index) {
         item.addEventListener('click', function () {
             location.href = arr[index];
         })
     })
 }
 
+/**
+ * 
+ */
+utils.addHeader = function () {
+    let header = document.createElement('header');
+    header.className = 'hback';
+    let html = `
+    <i class="iconfont icon-left-back abs plr15"></i>
+    <p class="ta">个人资料</p>
+    `
+    header.innerHTML = html;
+    let main = document.querySelector('main');
+    document.querySelector('body').insertBefore(header, main);
+    // 回退功能
+    let gback = document.querySelector('.icon-left-back');
+    gback.addEventListener('click', function (event) {
+        history.back();
+    })
+}
 
 window.utils = utils;

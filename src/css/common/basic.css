@@ -59,3 +59,21 @@ footer  .icon-item{
 footer .active{
     color: #4294FF;
 }
+
+/* 公用标题table */
+.title-table{
+    justify-content: space-around;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid #DDD;
+}
+
+/* 公用头部样式 hback */
+.hback{
+    position: relative;
+    background:  #4294FF;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px !important;
+}
