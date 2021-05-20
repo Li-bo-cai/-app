@@ -1,0 +1,73 @@
+.video-load{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 370px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position:center center;
+    color: #fff;
+}
+.icon-left-back{
+    top: 0;
+    left: 0;
+    font-size: 20px !important; 
+    margin: 15px;
+}
+.icon-bofang{
+    font-size: 28px !important;
+}
+.sport-title{
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.sport-details{
+    justify-content: space-between;
+    padding: 10px 0 15px 0;
+    border-bottom:1px solid #ccc ;
+}
+.information{
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 20px 0;
+}
+.follow{
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 23px;
+    color: #fff;
+    background: #4294FF;
+    text-align: center;
+}
+.content{
+    margin-bottom: 35px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; 
+}
+.portrait{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #000;
+}
+.sport-start{
+    width: 100%;
+    height: 50px;
+    margin-top: 35px;
+    border-radius: 27px;
+    background: #4294FF;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}

@@ -1,0 +1,56 @@
+main{
+    width: 90%;
+    margin: 0 5%;
+    padding-bottom: 97px;
+}
+.ification{
+    margin: 15px 0 10px 0px;
+}
+.newest{
+    height: 210px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow:0px 0px 7px #2b2b2b;
+    overflow: hidden;
+}
+.newest-img{
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+.newest-img img{
+    width: 100%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+}
+.other-culum{
+    width: 100%;
+    height: 140px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow:0px 0px 7px #2b2b2b;
+    overflow: hidden;
+}
+.title{
+    top: 0;
+    left: 22px;
+}
+p{
+    width: 280px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+.culum-img{
+    width: 100%;
+    height: 140px;
+}
+.article-title{
+    padding-top: 54px;
+    padding-bottom: 10px;
+}

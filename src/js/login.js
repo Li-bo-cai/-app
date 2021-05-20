@@ -23,11 +23,11 @@ document.ready(function () {
                         location.href='../home.html';
                     },2000)
                 } else {
-                    utils.toast(false, '用户名或密码有误');
+                    utils.toast(false, '用户名或密码有误',1000);
                 }
             })
         } else {
-            utils.toast(false, '用户名或密码有误');
+            utils.toast(false, '用户名或密码有误',1000);
         }
     })
 

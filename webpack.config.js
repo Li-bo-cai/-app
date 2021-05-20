@@ -30,6 +30,8 @@ module.exports = {
         mine: './src/js/mine.js',
         edit: './src/js/edit.js',
         curriculum: './src/js/curriculum.js',
+        introduce:'./src/js/introduce.js',
+        play:'./src/js/play.js'
     },
     //出口
     output: {
@@ -125,6 +127,16 @@ module.exports = {
             template: './src/page/curriculum.html',//课程训练
             filename: 'curriculum.html',
             chunks: ['curriculum', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/introduce.html',//课程介绍
+            filename: 'introduce.html',
+            chunks: ['introduce', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/play.html',//视频播放
+            filename: 'play.html',
+            chunks: ['play', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
         }),
         // 输出到css文件夹里
         new MiniCssExtractPlugin({

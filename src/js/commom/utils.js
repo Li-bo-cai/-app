@@ -2,6 +2,8 @@
  * 工具函数
  */
 const utils = {};
+
+utils.baseUrl = 'http://139.9.177.51:8099';
 utils.teltext = function (val) {
     let reg = /^1[3|4|5|6|7|8|9][0-9]{9}$/g;
     let isReg = reg.test(val);
@@ -30,7 +32,6 @@ utils.toast = function (bool, msg, time = 2000) {
         toast.remove();
     }, time);
 }
-
 
 /**
  * @addfooter   添加页脚部分
@@ -63,7 +64,7 @@ utils.addFooter = function (page) {
 }
 
 /**
- * 
+ * @addHeader  头部返回样式
  */
 utils.addHeader = function () {
     let header = document.createElement('header');
@@ -82,4 +83,19 @@ utils.addHeader = function () {
     })
 }
 
+/** 
+*@StrTransFormatObject  将导航地址返回的 
+*     search的字符串转换为对象 使用方式 location.seach
+*@obj {}  返回转换出的对象
+**/
+utils.StrTransFormatObject = function (str) {
+    str = str.substr(1);
+    let arr = str.split('&');
+    let obj = new Object;
+    arr.forEach(function (item) {
+        let arr1 = item.split('=');
+        obj[arr1[0]] = arr1[1];
+    })
+    return obj;
+}
 window.utils = utils;

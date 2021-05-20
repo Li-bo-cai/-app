@@ -1,0 +1,28 @@
+.video-box{
+    background: #000;
+}
+
+#video-player{
+    margin-top: calc(50%);
+}
+
+.ctrl-box{
+    width: 100%;
+    height: 90px;
+}
+.progress{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #4294FF;
+}
+.icon{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+}
+.icon-btn{
+    font-size: 40px !important;
+}

@@ -60,13 +60,23 @@ footer .active{
     color: #4294FF;
 }
 
-/* 公用标题table */
+/* 运动公用标题table */
 .title-table{
+    width: 90%;
+    margin: 0 5%;
     justify-content: space-around;
     align-items: center;
     height: 56px;
     border-bottom: 1px solid #DDD;
 }
+.title-table .active{
+    font-size: 18px;
+    font-weight: bold;
+    color: #4294FF;
+}
+
+
+
 
 /* 公用头部样式 hback */
 .hback{

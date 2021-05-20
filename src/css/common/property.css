@@ -7,6 +7,8 @@
 .fldcol{flex-direction: column;}
 .dpnone { display: none; }
 .flex1 { flex: 1 }
+.jsaround{ justify-content: space-around;}
+.alicenter{ align-items: center;}
 /* 相对定位 */
 .rel{position: relative;}
 /* 绝对定位 */
@@ -19,11 +21,8 @@
 .mt16 { margin-top: 16px; }
 .mt20 { margin-top: 20px; }
 .mt40 { margin-top: 40px; }
-
 .mr16 { margin-right: 16px; } 
-
 .mb16 { margin-bottom: 16px; }
-
 .ml20 { margin-left: 20px; }
 .plr15{ padding: 0 15px;}
 .pd16 { padding: 16px; }
@@ -42,6 +41,9 @@
 }
 .c8A{
     color: #8A8A8A;
+}
+.c9A{
+    color: #9A9A9A;
 }
 .c429{
     color: #4294FF;

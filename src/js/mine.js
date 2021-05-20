@@ -57,8 +57,8 @@ document.ready(function () {
             $http.post('/users/userEdit', data, function (res1) {
                 console.log(res1);
                 // 加载图片
+                getUserInfo();
             })
-            getUserInfo();
         })
     })
 
