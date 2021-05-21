@@ -40,7 +40,7 @@ main{
     top: 0;
     left: 22px;
 }
-p{
+main p{
     width: 280px;
     white-space:nowrap;
     text-overflow:ellipsis;

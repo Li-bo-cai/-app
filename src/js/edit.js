@@ -24,7 +24,7 @@ document.ready(function () {
     let data = new Object;
 
 
-    
+
     // 页面初始加载
     nicknameDom.placeholder = user.nickname;
     signValDom.textContent = user.sign;
@@ -63,7 +63,7 @@ document.ready(function () {
             end: new Date().getFullYear(),
             onConfirm: function (res) {
                 data.birthday = res[0].value + '-' + res[1].value + '-' + res[2].value;
-                birthdayValDom.textContent = res[0].value + '-' + res[1].value + '-' + res[2].value;
+                birthdayValDom.textContent = res[0].value + '-' + res[1].value  + '-' + res[2].value;
                 console.log(res);
             },
             title: '日期选择'
@@ -129,14 +129,14 @@ document.ready(function () {
 
     // 信息保存
     saveDom.addEventListener('click', function (event) {
-        console.log(data);
-        data.sign = signValDom.value;
-        data.nickname = nicknameDom.value;
-        data.birthday = new Date(data.birthday).getTime();
-        data.address = [data.pro.name, data.city.name];
         data.userId = user.userId;
+        data.nickname = nicknameDom.value || nicknameDom.placeholder;
+        data.birthday = new Date(birthdayValDom.textContent).getTime() || new Date(data.birthday).getTime();
+        data.address = [proValDom.textContent, cityValDom.textContent] || [data.pro.name, data.city.name];
+        data.sign = signValDom.value;
+        console.log(data);
         $http.post('/users/userEdit', data, function (res) {
-            console.log(data);
+            console.log(res);
             utils.toast(true, '信息更改成功', 1000);
             setTimeout(function () {
                 location.href = './mine.html';

@@ -5,7 +5,12 @@
 #video-player{
     margin-top: calc(50%);
 }
-
+.excerpt{
+    bottom: 15px;
+    left: 15px;
+    font-size: 40px;
+    color: #fff;
+}
 .ctrl-box{
     width: 100%;
     height: 90px;
@@ -25,4 +30,41 @@
 }
 .icon-btn{
     font-size: 40px !important;
+}
+.modal{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: #fff;
+    background: rgba(50, 102, 243,.8);
+    display: none;
+}
+.content{
+    top: calc(50%-100px);
+    left: 5%;
+    width: 90%;
+    height: 200px;
+    /* border: 1px solid #fff; */
+}
+.video-btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding-top: 10px;
+    text-align: center;
+    background: rgb(121, 250, 154);
+}
+.end-btn{
+    background: rgb(252, 62, 62);
+}
+.list{
+    border: 1px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.video-img{
+    width: 150px;
+    height: 90px;
 }

@@ -38,5 +38,8 @@
     "production": [
       ">0.1%"
     ]
+  },
+  "dependencies": {
+    "echarts": "^5.1.1"
   }
 }

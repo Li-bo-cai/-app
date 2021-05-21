@@ -20,7 +20,7 @@ document.ready(function () {
                     localStorage.setItem('user', JSON.stringify(user));
                     utils.toast(true, '登录成功  即将跳转',2000);
                     setTimeout(function(){
-                        location.href='../home.html';
+                        location.href='./home.html';
                     },2000)
                 } else {
                     utils.toast(false, '用户名或密码有误',1000);

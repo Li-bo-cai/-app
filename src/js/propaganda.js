@@ -13,7 +13,7 @@ document.ready(function () {
             clearTimeout(myTime);
             // 判断是否有本地的用户
             let bool = localStorage.getItem('user') != null;
-            location.href = bool ? '../home.html' : '../login.html'
+            location.href = bool ? './home.html' : './login.html'
         } else {
             myTime = setTimeout(fn, 1000)
             time--;
@@ -25,7 +25,7 @@ document.ready(function () {
     btn.addEventListener('click', function (event) {
         // 判断是否有本地的用户
         let bool = localStorage.getItem('user') != null;
-        location.href = bool ? '../home.html' : '../login.html'
+        location.href = bool ? './home.html' : './login.html'
         clearTimeout(myTime);
     })
 })

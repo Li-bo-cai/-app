@@ -31,7 +31,9 @@ module.exports = {
         edit: './src/js/edit.js',
         curriculum: './src/js/curriculum.js',
         introduce:'./src/js/introduce.js',
-        play:'./src/js/play.js'
+        play:'./src/js/play.js',
+        sportsData:'./src/js/sports-data.js',
+        mybadge:'./src/js/mybadge.js',
     },
     //出口
     output: {
@@ -138,6 +140,16 @@ module.exports = {
             filename: 'play.html',
             chunks: ['play', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
         }),
+        new HtmlWebpackPlugin({
+            template: './src/page/sports-data.html',//运动视图
+            filename: 'sports-data.html',
+            chunks: ['sportsData', 'commonCss', 'dom', 'http', 'utils']      //链接到propaganda.js
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/mybadge.html',//运动徽章
+            filename: 'mybadge.html',
+            chunks: ['mybadge', 'commonCss', 'dom', 'utils']      //链接到propaganda.js
+        }),
         // 输出到css文件夹里
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
@@ -154,7 +166,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'home.html', // 打开的页面
+        openPage: 'propaganda.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }

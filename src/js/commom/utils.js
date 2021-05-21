@@ -55,7 +55,7 @@ utils.addFooter = function (page) {
     footer.innerHTML = html;
     document.querySelector('body').appendChild(footer);
     let iconItem = document.querySelectorAll('footer .icon-item');
-    let arr = ['../../home.html', '../../sport.html', '../../mine.html']
+    let arr = ['./home.html', './curriculum.html', './mine.html']
     iconItem.forEach(function (item, index) {
         item.addEventListener('click', function () {
             location.href = arr[index];

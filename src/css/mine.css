@@ -83,8 +83,8 @@ main{
     height: 100px;
     border-radius: 50%;
     border: 2px solid #8a8a8a;
+    overflow: hidden;
 }
-
 .logOut{
     margin-top: 10px;
     width: 100%;

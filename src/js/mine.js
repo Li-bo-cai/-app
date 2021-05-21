@@ -9,7 +9,8 @@ document.ready(function () {
     let headPortraitDom = document.querySelector('.head-portrait');
     let describeDom = document.querySelector('.describe');
     let fileBtn = document.querySelector('#file-btn');
-
+    let sportdataDom = document.querySelector('.sportdata');
+    let sportbadgeDom = document.querySelector('.sportbadge');
     let user = JSON.parse(localStorage.getItem('user'));
     // 更新信息
     function getUserInfo() {
@@ -38,7 +39,14 @@ document.ready(function () {
     // 点击跳转到编辑页
     userHeaderDom.addEventListener('click', function (event) {
         location.href = './edit.html';
-
+    })
+    // 点击跳转到运动详情
+    sportdataDom.addEventListener('click', function (event) {
+        location.href = './sports-data.html';
+    })
+    //点击跳转徽章页
+    sportbadgeDom.addEventListener('click', function () {
+        location.href = './mybadge.html';
     })
     // 图片上传
     let base_url = 'http://139.9.177.51:8099';
@@ -46,6 +54,7 @@ document.ready(function () {
         fileBtn.click()
         event.stopPropagation();
     })
+    // 上传按钮
     fileBtn.addEventListener('change', function (event) {
         $updateFile('/users/upload', 'imgurl', this.files[0], function (res) {
             let imgUrl = base_url + res.data;
